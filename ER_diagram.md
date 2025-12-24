@@ -16,6 +16,7 @@ erDiagram
         string content
         datetime created_at
         int parent_tweet_id
+        int quoted_tweet_id
         boolean is_retweet
     }
 
@@ -50,6 +51,7 @@ erDiagram
     TWEET ||--o{ LIKE : has
     TWEET ||--o{ NOTIFICATION : triggers
     TWEET ||--o{ TWEET : replies_to
+    TWEET ||--o{ TWEET : quotes
 
 
 ```
